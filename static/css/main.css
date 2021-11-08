@@ -5,47 +5,59 @@ html{
 body {
     width: 100%;
     height: 100%;
-    background-color:rgb(200, 202, 204);
+    background-color:rgb(137, 187, 240);
 }
 .container {
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 30%;
-    height: 40%;
-    background-color: gray;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(61, 61, 61);
     box-shadow: 10px 10px 10px black;
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
+    z-index: 1
 }
 .title {
     text-align: center;
     color: black;
 }
 .eightball {
-    width:50%;
-    height:10%;
-    background-color:rgb(185, 184, 184);
+    width:20%;
+    height:auto;
     text-align: center;
 }
 
 .weather {
-    width:50%;
-    height:10%;
-    background-color:rgb(185, 184, 184);
+    width:20%;
+    height:auto;
     text-align:center;
 }
 a {
     box-shadow: 5px 5px 5px black;
     border-radius: 10px;
     text-decoration: none;
+    font-size: 4px;
+    font-size: 1.7vw;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color:rgb(0, 172, 135)
 
 }
+
+a p {
+    margin: 0;
+    
+}
 a:hover {
-    background-color: chocolate;
+    background-color: rgb(0, 82, 150);
     color: black;
     border: solid 2px black;
 
@@ -54,4 +66,221 @@ a:hover {
     position: absolute;
     bottom: 5%;
     right: 5%;
+}
+
+.tinyball {
+    width:50%;
+    height:10%;
+}
+
+
+
+a img {
+    height: auto;
+    width:7.5%;
+    position: absolute;
+    right:25%;
+    transition: all .2s ease-in-out;
+}
+
+a:hover img {
+    transform: scale(1.5);
+    z-index:1;
+}
+
+.pythoncage {
+    pointer-events: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    z-index: 3
+}
+
+.python {
+    width: 5%;
+    height: 10px;
+    position: absolute;
+    bottom: 20%;
+    left: 30%;
+    z-index: -1;
+
+
+}
+
+.pythoncage:hover .python {
+    animation-name: snek;
+    animation-duration: 2s;
+    animation-timing-function:ease-in-out;
+    animation-fill-mode: forwards;
+
+
+}
+.pythoncage .python {
+    animation-name: snuk;
+    animation-duration: 2s;
+    animation-timing-function:ease-in-out;
+}
+
+@keyframes snek {
+    from {
+    width: 5%;
+    height: auto;
+    position: absolute;
+    bottom: 20%;
+    left: 30%;
+    z-index: -1;
+    transform: scaleX(-1)
+    }
+    40% {
+    width: 5%;
+    height: auto;
+    position: absolute;
+    bottom: 20%;
+    left: -10%;
+    z-index: 1;
+    transform: scaleX(-1)
+    }
+    60% {
+    width: 5%;
+    height: auto;
+    position: absolute;
+    bottom: 20%;
+    left: -10%;
+    z-index: 2;
+    transform: scaleX(-1)
+    }
+    80% {
+    width: 5%;
+    height: auto;
+    position: absolute;
+    bottom: 20%;
+    left: -10%;
+    z-index: 2;
+    transform: scaleX(1)
+    }
+    to {
+    width: 5%;
+    height: auto;
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    z-index: 2;
+    transform: scaleX(1)
+    }
+}
+@keyframes snuk {
+    from {
+    width: 5%;
+    height: auto;
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    z-index: 2;
+    transform: scaleX(1)
+    }
+    30% {
+    width: 5%;
+    height: auto;
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    z-index: 2;
+    transform: scaleX(1)    
+    }
+    40% {
+    width: 5%;
+    height: auto;
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    z-index: 2;
+    transform: scaleX(-1)    
+    }
+    50% {
+    width: 5%;
+    height: auto;
+    position: absolute;
+    bottom: 20%;
+    left: -10%;
+    z-index: -1;
+    transform: scaleX(-1)    
+    }
+    60%{
+    width: 5%;
+    height: auto;
+    position: absolute;
+    bottom: 20%;
+    left: -10%;
+    z-index: -1;
+    transform: scaleX(1)    
+    } 
+    to{
+    width: 5%;
+    height: auto;
+    position: absolute;
+    bottom: 20%;
+    left: 80%;
+    z-index: -1;
+    transform: scaleX(1)    
+    }     
+}
+.py{
+    width: 100%;
+    height:auto;
+    position: absolute;
+}
+
+.tooltip-toggle{
+    top: -10%;
+}
+.tooltip-toggle::before {
+    position: absolute;
+    top: -146px;
+    left: -7px;
+    background-color: rgb(0, 142, 177);
+    border-radius: 5px;
+    color: #fff;
+    content: attr(data-tooltip);
+    padding: 1rem;
+    text-transform: none;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    width: 160px;
+    z-index: 4;
+    
+}
+  .tooltip-toggle::after {
+    position: absolute;
+    bottom: 16px;
+    left: 37px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid rgb(0, 142, 177);
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+    margin-left: -5px;
+    width: 0;
+    z-index: 4;
+}
+
+.pythoncage:hover .tooltip-toggle::before,
+.pythoncage:hover .tooltip-toggle::after {
+  opacity: 1;
+  -webkit-transition: all 0.75s ease;
+  transition: all 0.75s ease;
+  transition-delay:2.5s;
+}
+
+.pythoncage .tooltip-toggle::before,
+.pythoncage .tooltip-toggle::after {
+  color: #efefef;
+  font-family: monospace;
+  font-size: 16px;
+  opacity: 0;
+  pointer-events: none;
+  text-align: center;
 }

@@ -4,12 +4,21 @@
         <meta cHarset="UTF-8">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
     </head>
-    <body>
+    <body> 
+    <div class="pythoncage">
+        
+        <div class="python">
+            <div class="tooltip-toggle" data-tooltip="Ahem! Well, hey there. Welcome to TJ's projects. I am his loyal gaurd python!">
+            <img class="py" src="{{ url_for('static', filename='python.png')}}"> 
+        </div>
+        </div>
         <div class="container">
             <h1 class="title">My projects</h1>
-            <a class="eightball" href="http://eightball.us.to">Magic Eightball</a>
-            <a class="weather" href="http://tjweather.us.to">Weather app</a>
-            <p class="sig">Timothy Newton</p>
+            <a class="eightball" href="http://jimothy/8ball/shake"><p>Magic Eightball</p><img src="{{ url_for('static', filename='tinyball.png')}}"></a>
+            <a class="weather" href="http://jimothy/weatherapp"><p>Weather App</p><img src="{{ url_for('static', filename='weathericon.png')}}"></a>
+    </div>
+        <p class="sig">Timothy Newton</p>
+            </div> 
         </div>
     </body>
 </html>
