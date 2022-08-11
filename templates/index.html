@@ -1,25 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta cHarset="UTF-8">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
-	<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='python.png')}}">
-    </head>
-    <body> 
-    <div class="pythoncage">
-        
-        <div class="python">
-            <div class="tooltip-toggle" data-tooltip="Ahem! Well, hey there. Welcome to TJ's projects. I am his loyal gaurd python!">
-            <img class="py" src="{{ url_for('static', filename='python.png')}}"> 
-        </div>
-        </div>
-        <div class="container">
-            <h1 class="title">My projects</h1>
-            <a class="eightball" href="http://jimothy.tech/8ball/shake"><p>Magic Eightball</p><img src="{{ url_for('static', filename='tinyball.png')}}"></a>
-            <a class="weather" href="http://jimothy.tech/weatherapp"><p>Weather App</p><img src="{{ url_for('static', filename='weathericon.png')}}"></a>
-    </div>
-        <p class="sig">Timothy Newton</p>
-            </div> 
-        </div>
-    </body>
-</html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&amp;display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4785980d9d.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="coffee-group">
+        <a href="#welcome-section" class="nav-link">About</a>
+        <img src="https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/ecc81425ba21683.png" class="coffee-icon">
+      </div>
+      <div class="coffee-group">
+        <a href="#projects" class="nav-link">Projects</a>
+        <img src="https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/ecc81425ba21683.png" class="coffee-icon">
+      </div>
+      <div class="coffee-group">
+        <a href="#contact" class="nav-link">Contact</a>
+        <img src="https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/ecc81425ba21683.png" class="coffee-icon">
+      </div>
+    </nav>
+    <section id="welcome-section">
+      <h1><span>Hi.</span> <span>My</span> <span>name</span> <span>is</span> <span>Timothy.</span></h1>
+      <em><p><span>I</span> <span>make</span> <span>stuff</span></p></em>
+    </section>
+    <section id="projects">
+      <em><h2 id="projects-title">Just some stuff I've brewed up...</h2></em>
+      <div id="project-grid">
+        <a class="project-tile" id="eightball" href="https://jimothy.tech/8ball/">
+          <img class="tile-img"  src="https://jimothy.tech/8ball/static/uploadimg/tinyball.png">
+          <h2 id="ball-title" class="tile-title">Magic Eightball</h2>
+        </a>
+        <a class="project-tile" id="weather" href="https://jimothy.tech/weatherapp/">
+          <img class="tile-img" src="https://jimothy.tech/weatherapp/static/weathericon.png">
+          <h2 id="weather-title" class="tile-title">Weather App</h2>
+        </a>
+      </div>
+    </section>
+    <section id="contact">
+      <img src="https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/ecc81425ba21683.png" id="coffee">
+      <h2 id="contact-title">Join me for a cup?</h2>
+      <div id="contact-bar">
+        <a href="https://github.com/Unicornasaurous" class="contact-link" id="profile-link" target="_blank">
+          <i class="fa-brands fa-github-square"></i>
+          Github
+        </a>
+        <a href="https://www.freecodecamp.org/fcc1212670a-255a-4f64-8743-3b4e1b9c05f1" class="contact-link">
+          <i class="fa-brands fa-free-code-camp"></i></i>Freecodecamp
+        </a>
+      </div>
+    </section>
+  </body>
+<html>
