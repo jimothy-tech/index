@@ -125,6 +125,9 @@ span:nth-child(9) {
 .project-tile{
   text-decoration: none;
   text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .project-tile:hover .tile-img{
   transform: scale(1.1);
@@ -132,7 +135,7 @@ span:nth-child(9) {
 }
 
 .tile-img{
-  width: 100%;
+  max-width: 50%;
   
 
 }
@@ -142,6 +145,8 @@ span:nth-child(9) {
   margin: 0;
   padding: 20px 5px;
   font-size: 20px;
+  width: fit-content;
+  text-align: center;
 }
 .project-tile:hover .tile-title{
   background: rgba(150,115,94,1);
@@ -194,3 +199,7 @@ span:nth-child(9) {
   flex-direction: column;
   align-items: center;
 }
+
+/* .project-title {
+
+} */
